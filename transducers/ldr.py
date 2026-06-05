@@ -1,3 +1,5 @@
+#tbi
+
 from machine import Pin, ADC
 import time
 
@@ -14,5 +16,5 @@ def a0_get (sample_size = 20, time_window = 400):
 while True:
     a0_raw = a0.get()
     raw_percent = (a0_raw / 1024) * 100
-    print(f"Raw: {a0_raw} | Luminosidade: {raw_percent:02.1f}%")
+    print(f"Raw: {a0_raw} | Luminosity: {raw_percent:.1f}%")
     time.sleep_ms(600)
